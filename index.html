@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Invitación</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif;background:#0b789d}
+#video{background:#000;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center}
+video{width:100%;max-height:85vh;display:block}
+#go{display:block;width:100%;max-width:520px;padding:16px;background:#ffe04a;color:#67400b;text-align:center;
+font-size:19px;font-weight:bold;text-decoration:none}
+#final{display:block;min-height:100vh;padding:25px 15px;background:
+radial-gradient(circle at 15% 15%,#fff 0 5px,transparent 6px),
+radial-gradient(circle at 85% 25%,#fff 0 7px,transparent 8px),
+linear-gradient(#42dfff,#0a779f)}
+.card{max-width:500px;margin:auto;background:#fff16b;border:6px solid #805315;border-radius:30px;
+padding:28px 20px;text-align:center;box-shadow:0 15px 40px #0006}
+h1{color:#70420b;font-size:clamp(30px,8vw,46px);margin:5px 0 10px;text-shadow:2px 2px #fff}
+p{color:#174e60;font-size:18px;font-weight:bold;line-height:1.4}
+input{width:100%;padding:15px;border:3px solid #258eaf;border-radius:14px;font-size:20px;text-align:center}
+label{display:block;color:#70420b;font-weight:bold;font-size:19px;margin:20px 0 8px}
+.btn{display:block;width:100%;padding:17px;margin-top:16px;border-radius:18px;text-decoration:none;font-size:18px;font-weight:900}
+.wa{background:#25d366;color:white}
+.map{background:white;color:#d7352b}
+.note{margin-top:15px;font-size:13px;color:#48606a}
+</style>
+</head>
+<body>
+
+<section id="video">
+<video preload="metadata" controls playsinline preload="metadata">
+<source src="invitacion.mp4" type="video/mp4">
+</video>
+<a id="go" href="#final">💛 CONTINUAR A LA INVITACIÓN</a>
+</section>
+
+<section id="final">
+<div class="card">
+<div style="font-size:52px">🫧 🍍 🫧</div>
+<h1>¡Nos encantaría verte!</h1>
+<p>Confirma tu asistencia por WhatsApp y dinos cuántas personas asistirán.</p>
+
+<label for="personas">¿Cuántas personas asistirán?</label>
+<input id="personas" type="number" min="1" max="30" placeholder="Escribe el número">
+
+<a class="btn wa" href="https://wa.me/529933703063" target="_blank" rel="noopener"
+onclick="var n=document.getElementById('personas').value;if(!n||n<1){alert('Escribe primero cuántas personas asistirán.');return false}this.href='https://wa.me/529933703063?text='+encodeURIComponent('¡Hola! Quiero confirmar mi asistencia. Seremos '+n+' persona'+(n==1?'':'s')+'.');">
+💚 CONFIRMAR ASISTENCIA POR WHATSAPP
+</a>
+
+<a class="btn map" href="https://maps.app.goo.gl/ooEr9HfyuhtpN3aj8?g_st=iw" target="_blank" rel="noopener">
+📍 VER UBICACIÓN
+</a>
+
+<div class="note">La ubicación abre Google Maps. La confirmación abre WhatsApp.</div>
+</div>
+</section>
+</body>
+</html>
